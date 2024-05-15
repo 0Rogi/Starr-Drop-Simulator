@@ -9,7 +9,7 @@ starr.addEventListener(`click`, e => {
     }
 
     currentUpgrade.id = ``;
-    currentUpgrade.src = ``;
+    currentUpgrade.src = `./assets/images/empty-upgrade.png`;
 
     //? Upgrade Starr Drop
     let upgrades = parseInt(currentUpgrade.getAttribute(`name`)) + 1;
@@ -55,6 +55,12 @@ starr.addEventListener(`click`, e => {
         nextUpgrade.src = `./assets/images/upgrade-mark.png`;
         nextUpgrade.id = `current`;
     } else {
+        let circle = document.getElementsByClassName(`circle`);
+        for(let i = 0; i < circle.length; i++) {
+            circle[i].style.visibility = `hidden`;
+        }
         document.getElementById(`upgradeText`).textContent = `TAP TO OPEN`;
+        document.getElementById(`starr`).style.width = `32%`
+        document.getElementById(`starr`).style.height = `32%`
     }
 });

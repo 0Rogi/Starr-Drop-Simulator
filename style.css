@@ -36,6 +36,7 @@ h1 {
   width: 25%;
   height: 25%;
   background: transparent;
+  transition: width .2s ease-in-out;
 }
 
 p {
@@ -58,7 +59,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 5px; /* Opzionale: Aggiunge uno spazio tra le immagini */
+  margin: 0 5px;
 }
 
 .circle {
