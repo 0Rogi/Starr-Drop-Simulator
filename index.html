@@ -7,26 +7,28 @@
     
     <title>Starr Drop Simulator</title>
     <link rel="stylesheet" href="./style.css">
-    <script defer src="./script.js"></script>
+    
+    <script defer src="./scripts/upgradeText.js"></script>
+    <script defer src="./scripts/upgradeStarr.js"></script>
 
 </head>
 <body>
     <div class="container">
-        <h1>RARE</h1>
-        <img src="assets/images/starr-drop.png" class="starr"></img>
-        <p>UPGRADE CHANCES</p>
+        <h1 id="rarityText">RARE</h1>
+        <img src="assets/images/starr-drop.png" id="starr" class="starr"></img>
+        <p id="upgradeText">UPGRADE CHANCES</p>
         <div class="upgradeContainer">
             <div class="circleWrapper">
-                <img src="assets/images/upgrade-mark.png" id="current" class="circle">
+                <img src="assets/images/upgrade-mark.png" name="1" id="current" class="circle">
             </div>
             <div class="circleWrapper">
-                <img src="assets/images/upgrade.png" class="circle">
+                <img src="assets/images/upgrade.png" name="2" class="circle">
             </div>
             <div class="circleWrapper">
-                <img src="assets/images/upgrade.png" class="circle">
+                <img src="assets/images/upgrade.png" name="3" class="circle">
             </div>
             <div class="circleWrapper">
-                <img src="assets/images/upgrade.png" class="circle">
+                <img src="assets/images/upgrade.png" name="4" class="circle">
             </div>
         </div>
     </div>
