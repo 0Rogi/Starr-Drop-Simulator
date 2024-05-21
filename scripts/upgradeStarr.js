@@ -44,7 +44,7 @@ starr.addEventListener(`click`, e => {
 
         //? Displaying Price
         document.getElementById(`container`).remove();
-        document.body.style.backgroundImage = 'radial-gradient(white 10%, cyan, blue)';
+        document.body.style.backgroundImage = 'radial-gradient(white 10%, rgb(0, 89, 255), rgb(2, 92, 194))';
 
         const div = document.createElement(`div`);
         div.className = `container`;
@@ -52,6 +52,7 @@ starr.addEventListener(`click`, e => {
         document.body.appendChild(div);
         
         const img = document.createElement(`img`);
+        img.className = `price`
         const text = document.createElement(`h2`);
         text.textContent = price;
 
