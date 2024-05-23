@@ -2,6 +2,7 @@
   font-family: "Nougat";
   padding: 0;
   margin: 0;
+  user-select: none;
 }
 
 body {
@@ -41,6 +42,7 @@ h2 {
   height: 550px;
   cursor: pointer;
   border-radius: 50px;
+  animation: moveUpDown 1.5s infinite;
 }
 
 #rotate {
@@ -108,6 +110,18 @@ p {
   }
   50% {
       box-shadow: 0 0 40px rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+  100% {
+      transform: translateY(0);
   }
 }
 
