@@ -16,33 +16,33 @@ starr.addEventListener(`click`, e => {
         //? Get the rarity
         const currentRarity = document.getElementById(`rarityText`);
 
-        //? Calibrating Prices
-        let prices = [];
+        //? Calibrating prizes
+        let prizes = [];
         switch (currentRarity.textContent.toLowerCase()) {
             case `rare`: {
-                prices = [`50x Coins`, `25x Power Points`, `10x Credits`, `10x Bling`, `25x XP Doublers`];
+                prizes = [`50x Coins`, `25x Power Points`, `10x Credits`, `10x Bling`, `25x XP Doublers`];
             } break;
             case `super rare`: {
-                prices = [`100x Coins`, `50x Power Points`, `50x Credits`, `20x Bling`, `200x XP Doublers`];
+                prizes = [`100x Coins`, `50x Power Points`, `50x Credits`, `20x Bling`, `200x XP Doublers`];
             } break;
             case `epic`: {
-                prices = [`500x Coins`, `200x Power Points`, `100x Credits`, `50x Bling`, `500x XP Doublers`];
+                prizes = [`500x Coins`, `200x Power Points`, `100x Credits`, `50x Bling`, `500x XP Doublers`];
             } break;
             case `mythic`: {
-                prices = [`700x Coins`, `500x Power Points`, `200x Credits`, `100x Bling`, `700x XP Doublers`];
+                prizes = [`700x Coins`, `500x Power Points`, `200x Credits`, `100x Bling`, `700x XP Doublers`];
             } break;
             case `legendary`: {
-                prices = [`1000x Coins`, `1000x Power Points`, `500x Credits`, `200x Bling`, `1000x XP Doublers`];
+                prizes = [`1000x Coins`, `1000x Power Points`, `500x Credits`, `200x Bling`, `1000x XP Doublers`];
             } break;
             default: {
-                prices = [`50x Coins`, `25x Power Points`, `10x Credits`, `10x Bling`, `25x XP Doublers`];
+                prizes = [`50x Coins`, `25x Power Points`, `10x Credits`, `10x Bling`, `25x XP Doublers`];
             } break;
         }
 
-        //? Choosing Price
-        const price = prices[Math.floor(Math.random() * prices.length)];
+        //? Choosing prize
+        const prize = prizes[Math.floor(Math.random() * prizes.length)];
 
-        //? Displaying Price
+        //? Displaying prize
         document.getElementById(`container`).remove();
         document.body.style.backgroundImage = 'radial-gradient(white 10%, rgb(0, 89, 255), rgb(2, 92, 194))';
 
@@ -52,20 +52,20 @@ starr.addEventListener(`click`, e => {
         document.body.appendChild(div);
         
         const img = document.createElement(`img`);
-        img.className = `price`
+        img.className = `prize`
         const text = document.createElement(`h2`);
-        text.textContent = price;
+        text.textContent = prize;
 
-        if (price.includes(`Coins`)) {
-            img.src = `./assets/images/prices/coins.png`;
-        } else if (price.includes(`Power Points`)) {
-            img.src = `./assets/images/prices/power_points.png`;
-        } else if (price.includes(`Credits`)) {
-            img.src = `./assets/images/prices/credits.png`;
-        } else if (price.includes(`Bling`)) {
-            img.src = `./assets/images/prices/blings.png`;
-        } else if (price.includes(`XP Doublers`)) {
-            img.src = `./assets/images/prices/xp_doublers.png`;
+        if (prize.includes(`Coins`)) {
+            img.src = `./assets/images/prizes/coins.png`;
+        } else if (prize.includes(`Power Points`)) {
+            img.src = `./assets/images/prizes/power_points.png`;
+        } else if (prize.includes(`Credits`)) {
+            img.src = `./assets/images/prizes/credits.png`;
+        } else if (prize.includes(`Bling`)) {
+            img.src = `./assets/images/prizes/blings.png`;
+        } else if (prize.includes(`XP Doublers`)) {
+            img.src = `./assets/images/prizes/xp_doublers.png`;
         }
 
         document.getElementById(`container`).appendChild(img);
