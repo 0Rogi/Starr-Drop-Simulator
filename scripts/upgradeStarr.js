@@ -79,6 +79,12 @@ starr.addEventListener(`click`, e => {
     currentUpgrade.id = ``;
     currentUpgrade.src = `./assets/images/empty-upgrade.png`;
 
+    //? Animation
+    starr.id = `rotate`;
+    setTimeout(() => {
+        starr.id = `starr`;
+    }, 300);
+    
     //? Upgrade Starr Drop
     let upgrades = parseInt(currentUpgrade.getAttribute(`name`)) + 1;
     const currentRarity = document.getElementById(`rarityText`);
