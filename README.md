@@ -18,10 +18,6 @@ Negli Starr Drop <u>non sono presenti i Brawler o le Skin</u>, di conseguenza sa
 - 🟡 **Punti** per Migliorare i Brawler;
 - 🥎 Raddoppia **XP**.
 
-## 🎬 ANTEPRIMA
-
-![preview](https://i.imgur.com/480E74a.gif)
-
 ## ✒️ AUTORI
 - 👑 [@0Rogi](https://github.com/0Rogi)
 - ✏️ [@Bluu](https://github.com/IRockSolid)
