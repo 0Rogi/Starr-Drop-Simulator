@@ -1,15 +1,21 @@
 const starr = document.getElementById(`starr`);
 let opened = false;
+let cooldown = false;
 
 setInterval(() => {
-    if(opened) {
+    if (opened) {
         document.addEventListener(`click`, () => {
             window.location.reload();
         })
     }
+
+    //? Remove Cooldown for Upgrading (Bug Prevention)
+    if (cooldown) cooldown = !cooldown;
 }, 500);
 
 starr.addEventListener(`click`, e => {
+    if (cooldown) return;
+
     const currentUpgrade = document.getElementById(`current`);
 
     if (!currentUpgrade) {
@@ -50,11 +56,13 @@ starr.addEventListener(`click`, e => {
         div.className = `container`;
         div.id = `container`;
         document.body.appendChild(div);
-        
+
         const img = document.createElement(`img`);
         img.className = `prize`
         const text = document.createElement(`h2`);
         text.textContent = prize;
+        const note = document.createElement(`p`);
+        note.textContent = `Press Anywhere to Open a New Starr Drop`;
 
         if (prize.includes(`Coins`)) {
             img.src = `./assets/images/prizes/coins.png`;
@@ -70,7 +78,8 @@ starr.addEventListener(`click`, e => {
 
         document.getElementById(`container`).appendChild(img);
         document.getElementById(`container`).appendChild(text);
-        
+        document.getElementById(`container`).appendChild(note);
+
         opened = true;
 
         return;
@@ -84,7 +93,7 @@ starr.addEventListener(`click`, e => {
     setTimeout(() => {
         starr.id = `starr`;
     }, 300);
-    
+
     //? Upgrade Starr Drop
     let upgrades = parseInt(currentUpgrade.getAttribute(`name`)) + 1;
     const currentRarity = document.getElementById(`rarityText`);
@@ -114,7 +123,7 @@ starr.addEventListener(`click`, e => {
             }
         } break;
         case `mythic`: {
-            let upgrade = Math.random() <= 0.02;
+            let upgrade = Math.random() <= 0.05;
             if (upgrade) {
                 currentRarity.textContent = `LEGENDARY`;
                 currentRarity.style.color = `rgb(251, 255, 141)`;
@@ -122,6 +131,9 @@ starr.addEventListener(`click`, e => {
             }
         } break;
     }
+
+    //? Set a Cooldown for Upgrading (Bug Prevention)
+    cooldown = true;
 
     //? Change Upgrade Images
     let nextUpgrade = document.getElementsByName(upgrades)[0];
@@ -134,7 +146,5 @@ starr.addEventListener(`click`, e => {
             circle[i].style.visibility = `hidden`;
         }
         document.getElementById(`upgradeText`).textContent = `TAP TO OPEN`;
-        // document.getElementById(`starr`).style.width = `32%`
-        // document.getElementById(`starr`).style.height = `32%`
     }
 });
