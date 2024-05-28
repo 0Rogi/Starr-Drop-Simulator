@@ -41,7 +41,7 @@ h2 {
   width: 500px;
   height: 550px;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 30%;
   animation: moveUpDown 1.5s infinite;
 }
 
@@ -56,6 +56,10 @@ p {
   text-shadow: 3px 0 black, -3px 0 black, 0 5px black, 0 -3px black,
     2px 2px black, -2px -2px black, 2px -2px black, -2px 2px black;
   font-style: italic;
+}
+
+#upgradeText {
+  animation: scaleText 1.2s linear infinite;
 }
 
 .upgradeContainer {
@@ -95,6 +99,15 @@ p {
   }
 }
 
+@keyframes scaleText {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.5);
+  }
+}
+
 @keyframes rotate {
   0% {
       transform: rotateY(0deg);
@@ -109,7 +122,7 @@ p {
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
   }
   50% {
-      box-shadow: 0 0 40px rgba(255, 255, 255, 1);
+      box-shadow: 0 0 40px 50px rgba(255, 255, 255, 10);
   }
 }
 

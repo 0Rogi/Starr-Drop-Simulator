@@ -1,5 +1,5 @@
 const text = document.getElementById(`upgradeText`);
-const phrases = [`UPGRADE CHANCES`, `A FEW MORE`, `STILL UPGRADE`]; // TODO Controllare Frasi Vere
+const phrases = [`UPGRADE CHANCES`, `A FEW MORE`, `STILL UPGRADE`];
 
 setInterval(() => {
     if (text.textContent == `TAP TO OPEN`) return;
