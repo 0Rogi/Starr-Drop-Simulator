@@ -142,3 +142,41 @@ p {
   font-family: "Nougat";
   src: url("./assets/font/Nougat-ExtraBlack.ttf");
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    height: fit-content;
+  }
+  
+  .container {
+    margin: 50px;
+  }
+
+  #rarityText {
+    font-size: 50px;
+    margin-top: 0px;
+  }
+
+  .starr {
+    width: 250px;
+    height: 300px;
+    border-radius: 30%;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+    transition: transform .2s ease-in-out;
+  }
+
+  .prize {
+    margin-top: 80px;
+    margin-bottom: 0px;
+    width: 80%;
+    height: 80%;
+  }
+
+  h2 {
+    margin-top: 10px
+  }
+}
